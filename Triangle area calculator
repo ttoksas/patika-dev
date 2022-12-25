@@ -1,0 +1,17 @@
+public class AreaCalculator{
+    public static void main (String[] args){
+   
+   int a, b,c,u;
+      double area;
+      Scanner scan =new Scanner(System.in);
+        System.out.println("1.Kenarı giriniz: ");
+        a= scan.nextInt();
+        System.out.println("2.Kenarı Giriniz: ");
+        b= scan.nextInt();
+        c= (int) Math.sqrt((a*a)+(b*b));
+        u=(a+b+c)/2;
+        area=Math.sqrt(u*(u-a)*(u-b)*(u-c));
+        System.out.println("Üçgenin Hipotenüsü: "+ c);
+        System.out.println("Üçgenin alanı: "+area);
+    }
+}
