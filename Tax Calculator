@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Tax_Calculator {
+    public static void main(String[] args) {
+        int price;
+        double tax1=0.18;
+        double tax2=0.08;
+        double taxRatio;
+        double taxAmount;
+        double totalAmount;
+        Scanner scan =new Scanner(System.in);
+        System.out.println("Tutarı giriniz: ");
+        price= scan.nextInt();
+        taxRatio = price<1000 ? tax1 :tax2;
+        taxAmount=price<1000 ? price*tax1:price*tax2;
+        totalAmount=taxAmount+price;
+        System.out.println("KDV'siz Tutar: " + price);
+        System.out.println("KDV Oranı: " + taxRatio);
+        System.out.println("KDV Tutarı: " + taxAmount);
+        System.out.println("Toplam Tutar: " + totalAmount);
+    }
+}
