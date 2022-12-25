@@ -23,12 +23,9 @@ public class Main {
         System.out.println("Tarih ders notunu giriniz: ");
         hist=scan.nextInt();
         average=(mat+phys+music+chem+tur+hist)/6;
-        if (average>=60){
-            System.out.println("Sınıfı geçti.");
-        }
-        else {
-            System.out.println("Sınıfta kaldı.");
-        }
-
+        System.out.println("Ortalamanız: "+ average);
+        boolean situation=average>=60;
+        String result =situation ? "Sınıfı geçtiniz.":"Sınıfta kaldınız.";
+        System.out.println(result);
     }
 }
