@@ -1,31 +1,25 @@
 import java.util.Scanner;
 
 public class Main {
+    static boolean polindrom(int num){
+        int temp=num , reverseNum = 0, lastNum;
+        while(temp!=0) {
+            lastNum=temp%10;
+            reverseNum=(reverseNum*10)+lastNum;
+            temp/=10;
+        }
+        if (reverseNum==num)
+            return true;
+        else
+            return false;
+    }
     public static void main(String[] args) {
-        int mat;
-        int phys;
-        int music;
-        int chem;
-        int tur;
-        int hist;
-        int average;
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Matematik ders notunu giriniz: ");
-        mat=scan.nextInt();
-        System.out.println("Fizik ders notunu giriniz: ");
-        phys=scan.nextInt();
-        System.out.println("Müzik ders notunu giriniz: ");
-        music=scan.nextInt();
-        System.out.println("Kimya ders notunu giriniz: ");
-        chem=scan.nextInt();
-        System.out.println("Türkçe ders notunu giriniz: ");
-        tur=scan.nextInt();
-        System.out.println("Tarih ders notunu giriniz: ");
-        hist=scan.nextInt();
-        average=(mat+phys+music+chem+tur+hist)/6;
-        System.out.println("Ortalamanız: "+ average);
-        boolean situation=average>=60;
-        String result =situation ? "Sınıfı geçtiniz.":"Sınıfta kaldınız.";
-        System.out.println(result);
+
+        System.out.println(polindrom(246));
+
+
     }
 }
+
+
+
